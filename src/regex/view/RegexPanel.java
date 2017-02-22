@@ -26,9 +26,12 @@ public class RegexPanel extends JPanel
 		private String lastName;
 		private String phoneNumber;
 		private String email;
+		private RegexController baseController;
 
 		public RegexPanel(RegexController baseController)
 			{
+				baseController = this.baseController;
+				
 				firstName = "";
 				lastName = "";
 				email = "";
@@ -89,6 +92,7 @@ public class RegexPanel extends JPanel
 						public void actionPerformed(ActionEvent e)
 							{
 								firstName = nameField.getText();
+								baseController.checkName(firstName);
 							}
 					});
 				lastNameField.addActionListener(new ActionListener()
