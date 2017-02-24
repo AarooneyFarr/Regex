@@ -92,7 +92,7 @@ public class RegexPanel extends JPanel
 						public void actionPerformed(ActionEvent e)
 							{
 								firstName = nameField.getText();
-								baseController.checkName(firstName);
+								baseController.checkName("Aaron");
 							}
 					});
 				lastNameField.addActionListener(new ActionListener()

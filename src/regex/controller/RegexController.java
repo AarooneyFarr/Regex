@@ -20,13 +20,15 @@ public class RegexController
 		{
 			appFrame = new RegexFrame(this);
 			appPanel = new RegexPanel(this);
-			firstName = "(\\S)({2,20})";
-			
+			firstName = "^([a-zA-Z]{2,30})";
+			lastName = "^([a-zA-Z.-,']{2,30})";
+					
 		}
 		
 		public void start()
 		{
-			
+			checkName("Aasdfghmlaokingumbheiumdhsoidk");
+			checkName("12345");
 		}
 		
 		public void checkName(String name)
